@@ -10,6 +10,11 @@ class Main {
     public static void main(String[] args) {
 
         JFrame jam = new JFrame("An Event Example");
+            Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+            Insets scnMax = Toolkit.getDefaultToolkit().getScreenInsets(getGraphicsConfiguration());
+            int taskBarSize = scn.Max.bottom;
+            int width = screenSize.width;
+            int height = screenSize.height;
 
             jam.setLayout(new FlowLayout());
             jam.setSize(300, 200);
@@ -27,8 +32,8 @@ class Main {
 
             @Override
             public void mouseMoved(MouseEvent e) {
-                int x = getRandomNumberInRange(0, 1920 - 100);
-                int y = getRandomNumberInRange(0, 1080 - 50);
+                int x = getRandomNumberInRange(0, width - 100);
+                int y = getRandomNumberInRange(0, height - 50);
                 janDVD.setBounds(x, y, 100, 50);
             }
 
